@@ -1,0 +1,15 @@
+services:
+  website:
+    container_name: medicalapp
+    entrypoint:
+    - /bin/bash
+    - /root/entrypoint.sh
+    image: golang:1.10.3-stretch
+    ports:
+    - 80:80/tcp
+    volumes:
+    - ${PWD}/entrypoint.sh:/root/entrypoint.sh:rw
+    - ${PWD}:/go/src/github.com/cixtor/medicalapp:rw
+    working_dir: /go/src/github.com/cixtor/medicalapp
+version: '3.1'
+
