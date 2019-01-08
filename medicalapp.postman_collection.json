@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "5f20af2c-e627-4faf-8687-b5db1c98563c",
+		"name": "Medical RESTful App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET /appointments/:token/:date/free",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost/appointments/2bf8d578-7ab4-4694-b5e6-d89b794872c1/2018-07-20/free",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"appointments",
+						"2bf8d578-7ab4-4694-b5e6-d89b794872c1",
+						"2018-07-20",
+						"free"
+					]
+				},
+				"description": "Returns a list of free slots for a given date."
+			},
+			"response": []
+		},
+		{
+			"name": "POST /appointments/:token/:date/:time/:name",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost/appointments/2bf8d578-7ab4-4694-b5e6-d89b794872c1/2018-07-20/10:30/John+Smith",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"appointments",
+						"2bf8d578-7ab4-4694-b5e6-d89b794872c1",
+						"2018-07-20",
+						"10:30",
+						"John+Smith"
+					]
+				},
+				"description": "Requests a slot to be reserved on the date and time for the patient name."
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /appointments/:token/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost/appointments/2bf8d578-7ab4-4694-b5e6-d89b794872c1/foobar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"appointments",
+						"2bf8d578-7ab4-4694-b5e6-d89b794872c1",
+						"foobar"
+					]
+				},
+				"description": "Deletes an appointment (create one first and then copy the UUID to replace the default \"foobar\")"
+			},
+			"response": []
+		},
+		{
+			"name": "GET /appointments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost/appointments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"appointments"
+					]
+				},
+				"description": "Returns a list of existing appointments."
+			},
+			"response": []
+		}
+	]
+}
